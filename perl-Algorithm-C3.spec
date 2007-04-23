@@ -2,7 +2,7 @@
 %define name	perl-%{module}
 %define	modprefix Algorithm
 
-%define version 0.05
+%define version 0.06
 
 %define	rel	1
 %define release %mkrel %{rel}

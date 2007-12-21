@@ -22,6 +22,7 @@ BuildRequires:	perl(Carp) >= 0.01
 BuildRequires:  perl(Module::Build)
 BuildRequires:	perl(Test::More) >= 0.47
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module implements the C3 algorithm. Most of the uses for C3

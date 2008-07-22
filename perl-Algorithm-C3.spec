@@ -5,7 +5,7 @@
 %define version 0.07
 
 %define	rel	1
-%define release %mkrel 1
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}

@@ -1,20 +1,16 @@
-%define module	Algorithm-C3
-%define name	perl-%{module}
-%define	modprefix Algorithm
+%define upstream_name	 Algorithm-C3
+%define upstream_version 0.08
 
-%define version 0.08
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-%define	rel	1
-%define release %mkrel 3
-
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
-Group:		Development/Perl
 Summary:	A module for merging hierarchies using the C3 algorithm
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -22,7 +18,7 @@ BuildRequires:	perl(Carp) >= 0.01
 BuildRequires:  perl(Module::Build)
 BuildRequires:	perl(Test::More) >= 0.47
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements the C3 algorithm. Most of the uses for C3
@@ -31,7 +27,7 @@ used for things like dependency resolution as well since it tends to
 do such a nice job of preserving local precendence orderings.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor destdir=%{buildroot}
@@ -50,6 +46,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{perl_vendorlib}/%{modprefix}
+%{perl_vendorlib}/Algorithm
 %{_mandir}/man*/*
-

@@ -26,11 +26,11 @@ do such a nice job of preserving local precendence orderings.
 %setup -qn %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Build.PL installdirs=vendor destdir=%{buildroot}
-./Build
+%{__perl} Makefile.PL INSTALLDIRS=vendor destdir=%{buildroot}
+%make
 
 %check
-./Build test
+%make test
 
 %install
 ./Build install

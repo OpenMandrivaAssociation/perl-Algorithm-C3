@@ -35,7 +35,7 @@ do such a nice job of preserving local precendence orderings.
 %make test
 
 %install
-./Build install
+%makeinstall_std
 
 %files
 %doc Changes README

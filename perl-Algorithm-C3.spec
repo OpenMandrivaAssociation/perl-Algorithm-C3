@@ -15,6 +15,7 @@ BuildArch:	noarch
 BuildRequires:	perl(Carp) >= 0.01
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Test::More) >= 0.47
+BuildRequires:  perl(JSON::PP)
 
 %description
 This module implements the C3 algorithm. Most of the uses for C3

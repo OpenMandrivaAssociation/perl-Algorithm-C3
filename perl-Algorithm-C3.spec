@@ -1,11 +1,11 @@
 %define upstream_name	 Algorithm-C3
-%define upstream_version 0.09
+%define upstream_version 0.10
 
 Summary:	A module for merging hierarchies using the C3 algorithm
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
@@ -41,5 +41,3 @@ do such a nice job of preserving local precendence orderings.
 %doc Changes README
 %{perl_vendorlib}/Algorithm
 %{_mandir}/man*/*
-
-

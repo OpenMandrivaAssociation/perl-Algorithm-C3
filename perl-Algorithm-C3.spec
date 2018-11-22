@@ -5,11 +5,11 @@ Summary:	A module for merging hierarchies using the C3 algorithm
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	7
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://metacpan.org/pod/Algorithm::C3
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
 BuildArch:	noarch
 
 BuildRequires:	perl(Carp) >= 0.01

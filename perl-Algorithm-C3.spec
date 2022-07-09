@@ -1,11 +1,11 @@
 %define upstream_name	 Algorithm-C3
-%define upstream_version 0.10
+%define upstream_version 0.11
 
 Summary:	A module for merging hierarchies using the C3 algorithm
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	7
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Algorithm::C3

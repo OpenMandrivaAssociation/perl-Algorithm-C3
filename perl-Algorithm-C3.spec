@@ -8,7 +8,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Algorithm::C3
+Url:		https://metacpan.org/pod/Algorithm::C3
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
 BuildArch:	noarch
 

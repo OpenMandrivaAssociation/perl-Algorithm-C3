@@ -1,15 +1,14 @@
 %define upstream_name	 Algorithm-C3
-%define upstream_version 0.11
 
 Summary:	A module for merging hierarchies using the C3 algorithm
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	0.11
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Algorithm::C3
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Algorithm/%{upstream_name}-%{version}.tar.gz
 BuildArch:	noarch
 
 BuildRequires:	perl(Carp) >= 0.01
@@ -25,17 +24,17 @@ used for things like dependency resolution as well since it tends to
 do such a nice job of preserving local precendence orderings.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%setup -qn %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor destdir=%{buildroot}
-%make
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README

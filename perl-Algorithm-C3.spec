@@ -11,6 +11,7 @@ Url:		https://metacpan.org/pod/Algorithm::C3
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Algorithm/%{upstream_name}-%{version}.tar.gz
 BuildArch:	noarch
 
+BuildRequires:	make
 BuildRequires:	perl(Carp) >= 0.01
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Test::More) >= 0.47
